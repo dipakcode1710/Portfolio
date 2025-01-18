@@ -5,232 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipak Suryawanshi | Portfolio</title>
     <style>
-        /* Global Styles */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            background: #121212;
-            color: white;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
-            position: relative;
-            height: 100vh;
-            background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            background-color: #0073e6;
             color: white;
+            padding: 20px 0;
+            text-align: center;
         }
         header h1 {
-            font-size: 4em;
             margin: 0;
-            animation: fadeIn 2s ease-out;
+            font-size: 2.5em;
         }
         header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            animation: fadeIn 3s ease-out;
+            margin: 10px 0 0;
+            font-size: 1.2em;
         }
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 10;
+            text-align: center;
+            margin: 20px 0;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: color 0.3s ease;
+            color: #0073e6;
+            font-size: 1.1em;
         }
         nav a:hover {
-            color: #00c6ff;
+            text-decoration: underline;
         }
         section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 40px auto;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         section h2 {
-            font-size: 2.5em;
-            color: #00c6ff;
-            margin-bottom: 20px;
-            text-align: center;
-            animation: fadeInUp 2s ease-out;
-        }
-        section p, section ul {
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            animation: fadeInUp 2s ease-out;
-        }
-        section ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        section ul li {
+            color: #0073e6;
             margin-bottom: 10px;
         }
         footer {
-            padding: 20px;
             text-align: center;
-            background: #121212;
-            color: #00c6ff;
-        }
-        
-        /* Button */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid #00c6ff;
-            color: #00c6ff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-        .btn:hover {
-            background-color: #00c6ff;
-            color: #121212;
+            padding: 10px 0;
+            background: #0073e6;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
-        /* Social Media Icons */
-        .social-icons img {
-            width: 40px;
-            height: 40px;
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 3em;
+                font-size: 2em;
             }
             header p {
-                font-size: 1.2em;
+                font-size: 1em;
             }
             nav a {
                 font-size: 1em;
                 margin: 0 10px;
             }
             section {
-                padding: 40px 15px;
+                padding: 15px;
+                margin: 10px;
             }
         }
+
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 1.5em;
             }
             header p {
-                font-size: 1em;
+                font-size: 0.9em;
             }
             nav a {
-                font-size: 0.9em;
-                margin: 0 5px;
+                display: block;
+                margin: 5px 0;
+                font-size: 1em;
             }
             section {
-                padding: 30px 10px;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div>
-            <h1>Dipak Suryawanshi</h1>
-            <p>Junior Java Software Developer</p>
-        </div>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Dipak Suryawanshi</h1>
+        <p>Junior Java Software Developer</p>
     </header>
-
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am Dipak Ramhari Suryawanshi, a passionate Java Junior Software Developer. I completed my Bachelor of Science in Computer Science at Yashwantrao Mohite College, Pune. Currently, I am working at Vivekanand Technologies, Navi Mumbai, where I am enhancing my skills and contributing to innovative projects.</p>
+        <p>
+            Hello! I am Dipak Ramhari Suryawanshi, a passionate Java Junior Software Developer. I completed my Bachelor of Science in Computer Science at Yashwantrao Mohite College, Pune. 
+            Currently, I am working at Vivekanand Technologies, Navi Mumbai, where I am enhancing my skills and contributing to innovative projects.
+        </p>
     </section>
-
     <section id="skills">
         <h2>Skills</h2>
         <ul>
             <li>Java (Core and Advanced)</li>
-            <li>Web Development (HTML, CSS, JavaScript, PHP)</li>
+            <li>Web Development (HTML, CSS, JavaScript,PHP)</li>
             <li>Database Management (MySQL)</li>
             <li>Version Control: Git</li>
-            <li>Development Tools and IDEs: Eclipse, IntelliJ IDEA, Visual Studio Code, SQL Workbench</li>
+            <li>Development Tools and IDEs:Eclipse,IntelliJ IDEA, Visual Studio Code, SQL Workbench </li>
         </ul>
     </section>
-
     <section id="experience">
         <h2>Experience</h2>
-        <p><strong>Vivekanand Technologies, Navi Mumbai <a href="https://www.vitec.co.in/">www.vitec.co.in</a></strong> <br> Junior Java Software Developer (Current) <br>
+        <p>
+            <strong>Vivekanand Technologies, Navi Mumbai <a href="https://www.vitec.co.in/">www.vitec.co.in</a></strong> <br>
+            Junior Java Software Developer (Current) <br>
             <ul>
                 <li>Collaborated with a team to develop web-based applications.</li>
                 <li>Contributed to debugging and performance optimization tasks.</li>
             </ul>
         </p>
     </section>
-
     <section id="contact">
         <h2>Contact</h2>
-        <p>Feel free to reach out to me for collaborations or inquiries:</p>
-        <div class="social-icons">
-            <a href="mailto:dipak.code2002@gmail.com">
-                <img src="email-icon.png" alt="Email">
-            </a>
-            <a href="https://www.linkedin.com/in/dipak-suryawanshi-925463209" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/dipakcode1710" target="_blank">
-                <img src="github-icon.png" alt="GitHub">
-            </a>
-        </div>
-        <a href="mailto:dipak.code2002@gmail.com" class="btn">Contact Me</a>
+        <p>
+            Feel free to reach out to me for collaborations or inquiries:
+        </p>
+        <ul>
+            <li>Email: <a href="dipak.code2002@gmail.com">dipak.code2002@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/dipak-suryawanshi-925463209" target="_blank">linkedin.com/in/dipak-suryawanshi</a></li>
+            <li>GitHub: <a href="https://github.com/dipakcode1710" target="_blank">github.com/dipakcode1710</a></li>
+        </ul>
     </section>
-
     <footer>
         &copy; 2025 Dipak Suryawanshi. All rights reserved.
     </footer>
