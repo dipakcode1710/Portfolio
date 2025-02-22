@@ -3,152 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipak Suryawanshi | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-        }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0073e6;
-            font-size: 1.1em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            color: #0073e6;
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #0073e6;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            nav a {
-                font-size: 1em;
-                margin: 0 10px;
-            }
-            section {
-                padding: 15px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-            header p {
-                font-size: 0.9em;
-            }
-            nav a {
-                display: block;
-                margin: 5px 0;
-                font-size: 1em;
-            }
-            section {
-                padding: 10px;
-            }
-        }
-    </style>
+    <meta name="description" content="Portfolio of Dipak Ramhari Suryawanshi, a skilled Junior Software Developer available for hire.">
+    <meta name="keywords" content="Dipak Suryawanshi, Junior Software Developer, Java, portfolio, hire">
+    <title>Dipak Suryawanshi - Junior Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- GitHub Calendar Responsive CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Dipak Suryawanshi</h1>
-        <p>Junior Java Software Developer</p>
-    </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I am Dipak Ramhari Suryawanshi, a passionate Java Junior Software Developer. I completed my Bachelor of Science in Computer Science at Yashwantrao Mohite College, Pune. 
-            Currently, I am working at Vivekanand Technologies, Navi Mumbai, where I am enhancing my skills and contributing to innovative projects.
-        </p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java (Core and Advanced)</li>
-            <li>Web Development (HTML, CSS, JavaScript,PHP)</li>
-            <li>Database Management (MySQL)</li>
-            <li>Version Control: Git</li>
-            <li>Development Tools and IDEs:Eclipse,IntelliJ IDEA, Visual Studio Code, SQL Workbench </li>
-        </ul>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>
-            <strong>Vivekanand Technologies, Navi Mumbai <a href="https://www.vitec.co.in/">www.vitec.co.in</a></strong> <br>
-            Junior Java Software Developer (Current) <br>
-            <ul>
-                <li>Collaborated with a team to develop web-based applications.</li>
-                <li>Contributed to debugging and performance optimization tasks.</li>
+        <nav class="navbar">
+            <h1>Dipak Suryawanshi</h1>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Hire Me</a></li>
             </ul>
-        </p>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I’m Dipak Suryawanshi</h1>
+            <p>A <span class="typed-text"></span> crafting cutting-edge solutions.</p>
+            <a href="#contact" class="btn hire-btn">Hire Me Now</a>
+            <a href="assets/resume.pdf" download class="btn">Download Resume</a>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            Feel free to reach out to me for collaborations or inquiries:
-        </p>
-        <ul>
-            <li>Email: <a href="dipak.code2002@gmail.com">dipak.code2002@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/dipak-suryawanshi-925463209" target="_blank">linkedin.com/in/dipak-suryawanshi</a></li>
-            <li>GitHub: <a href="https://github.com/dipakcode1710" target="_blank">github.com/dipakcode1710</a></li>
-        </ul>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Experience & Skills</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Junior Software Developer at Vivekananda Technologies</h3>
+                <p>Jun 2023 - Present (1 Year 7 Months)</p>
+                <ul>
+                    <li>Developed web applications using Java, enhancing user experiences.</li>
+                    <li>Collaborated with cross-functional teams to analyze requirements and integrate solutions.</li>
+                    <li>Delivered high-quality software within deadlines, improving project efficiency.</li>
+                </ul>
+            </div>
+            <div class="skills-card">
+                <h3>Core Skills</h3>
+                <div class="skills">
+                    <div class="skill"><span>Java</span><div class="skill-bar" data-width="85%"></div></div>
+                    <div class="skill"><span>HTML/CSS</span><div class="skill-bar" data-width="80%"></div></div>
+                    <div class="skill"><span>JavaScript</span><div class="skill-bar" data-width="75%"></div></div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <p>Showcasing my ability to deliver functional and user-friendly applications.</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/tictactoe.jpg" alt="Tic-Tac-Toe Game">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>Built an interactive game with HTML, CSS, and JavaScript. Features dynamic player turns and win detection.</p>
+                <a href="https://dynamictictactoe.netlify.app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/dipakcode1710/Java_Spring" target="_blank" class="btn secondary-btn">Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Contributions Section -->
+    <section id="github" class="section">
+        <h2>GitHub Contributions</h2>
+        <p>My coding activity over the past year.</p>
+        <div class="calendar">
+            <!-- GitHub Calendar will load here -->
+            Loading contributions...
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <h2>What Others Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Dipak’s dedication and technical skills made a significant impact on our projects."</p>
+                <span>- Team Lead, Vivekananda Technologies (Placeholder)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Let’s Work Together</h2>
+        <p class="centered-text">Available for full-time or freelance Java development roles. Contact me today!</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Tell me about your opportunity" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p id="form-message"></p>
+        <div class="contact-links">
+            <p>Email: <a href="mailto:suryawanshidipak303@gmail.com">suryawanshidipak303@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919130766562">+91 9130766562</a></p>
+            <p>GitHub: <a href="https://github.com/dipakcode1710" target="_blank">dipakcode1710</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2025 Dipak Suryawanshi. All rights reserved.
+        <div class="socials">
+            <a href="https://github.com/dipakcode1710" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>© 2025 Dipak Suryawanshi. Ready to join your team!</p>
+        <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- GitHub Calendar Script -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
