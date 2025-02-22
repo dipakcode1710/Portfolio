@@ -373,20 +373,20 @@ h2::after {
 
 .contact-links {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: 1rem;
 }
 
 .contact-links a {
     color: #d97706;
-    text-decoration: none;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    transition: color 0.3s;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    transition: color 0.3s, transform 0.3s;
 }
 
 .contact-links a:hover {
     color: #fb923c;
+    transform: scale(1.1);
 }
 
 /* Footer */
