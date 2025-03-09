@@ -52,23 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
 
-    // Phone icon click handler
-    const phoneIcon = document.querySelector('.contact-item .contact-icon i.fas.fa-phone');
-    if (phoneIcon) {
-        phoneIcon.parentElement.addEventListener('click', function(e) {
-            // Check if user is on mobile device
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            if (isMobile) {
-                e.preventDefault();
-                // Get phone number from the adjacent text
-                const phoneNumber = '(+91) 9130766562';
-                // Initiate phone call
-                window.location.href = `tel:${phoneNumber}`;
-            }
-        });
-    }
-
-    // Form submission handling with email sending
+    // Form submission handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -87,20 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 showAlert('Please enter a valid email address!', 'error');
                 return;
             }
-
-            // EmailJS sending logic
-            emailjs.send('service_4huh75v', 'template_kuxh1xy', {
-                from_name: name,
-                from_email: email,
-                subject: subject,
-                message: message
-            })
-            .then(function(response) {
-                showAlert('Your message has been sent successfully!', 'success');
-                contactForm.reset();
-            }, function(error) {
-                showAlert('Failed to send message. Please try again later.', 'error');
-            });
+            
+            showAlert('Your message has been sent successfully!', 'success');
+            this.reset();
         });
     }
 
