@@ -77,6 +77,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Phone link handling
+    const phoneLink = document.querySelector('.phone-link');
+    if (phoneLink) {
+        phoneLink.addEventListener('click', function(e) {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (!isMobile) {
+                e.preventDefault();
+                showAlert('Phone calls are only available on mobile devices!', 'error');
+            }
+        });
+    }
+
     // Function to validate email
     function validateEmail(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

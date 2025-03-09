@@ -495,6 +495,25 @@ body {
     color: var(--primary-color);
 }
 
+/* Phone Link Styles */
+.phone-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.phone-link:hover .contact-icon {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.phone-link:hover h4,
+.phone-link:hover p {
+    color: var(--accent-color);
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
