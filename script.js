@@ -55,25 +55,63 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const name = this.querySelector('input[placeholder="Your Name"]').value;
-            const email = this.querySelector('input[placeholder="Your Email"]').value;
-            const subject = this.querySelector('input[placeholder="Subject"]').value;
-            const message = this.querySelector('textarea').value;
-            
+            const name = this.querySelector('input[name="name"]').value.trim();
+            const email = this.querySelector('input[name="email"]').value.trim();
+            const subject = this.querySelector('input[name="subject"]').value.trim();
+            const message = this.querySelector('textarea[name="message"]').value.trim();
+
             if (!name || !email || !subject || !message) {
                 showAlert('Please fill all the fields!', 'error');
                 return;
             }
-            
+
             if (!validateEmail(email)) {
                 showAlert('Please enter a valid email address!', 'error');
                 return;
             }
-            
-            showAlert('Your message has been sent successfully!', 'success');
-            this.reset();
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            const isLocalPreview = window.location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+            if (isLocalPreview) {
+                showAlert('Form submission is available after deployment on Netlify.', 'error');
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                return;
+            }
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                });
+
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
+
+                showAlert('Your message has been sent successfully!', 'success');
+                this.reset();
+            } catch (error) {
+                console.error('Contact form submission error:', error);
+                showAlert('Fetch failed, retrying with direct form submit...', 'error');
+                this.submit();
+                return;
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 
