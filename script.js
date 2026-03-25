@@ -77,15 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
-            const isLocalPreview = window.location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(window.location.hostname);
-
-            if (isLocalPreview) {
-                showAlert('Form submission is available after deployment on Netlify.', 'error');
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-                return;
-            }
-
             const formData = new FormData(this);
 
             try {
@@ -105,9 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.reset();
             } catch (error) {
                 console.error('Contact form submission error:', error);
-                showAlert('Fetch failed, retrying with direct form submit...', 'error');
-                this.submit();
-                return;
+                showAlert('Unable to send message right now. Please try again later.', 'error');
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
