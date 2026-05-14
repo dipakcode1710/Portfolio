@@ -608,3 +608,272 @@ body {
         width: 100% !important;
     }
 }
+
+/* ===== HERO BADGE & STATS ===== */
+.hero-badge {
+    display: inline-block;
+    background: rgba(93, 139, 244, 0.2);
+    border: 1px solid rgba(93, 139, 244, 0.4);
+    color: #a5b4fc;
+    font-size: 0.8rem;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    letter-spacing: 0.03em;
+}
+
+.hero-cta-outline {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+.hero-cta-outline:hover {
+    border-color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-item { text-align: center; }
+
+.stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+/* ===== NEW PROJECT BADGE & TYPE ===== */
+.new-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #10b981;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.project-type {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.project-link-gh {
+    background-color: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #e5e7f0;
+}
+.project-link-gh:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* ===== MICROSERVICES SECTION ===== */
+.ms-section {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e7f0;
+    padding: 28px;
+    box-shadow: 0 2px 16px rgba(45, 49, 250, 0.08);
+}
+
+.ms-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.ms-toggle button {
+    padding: 7px 16px;
+    border-radius: 50px;
+    border: 1px solid #e5e7f0;
+    background: #fff;
+    color: #6b7280;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.ms-toggle button.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.ms-toggle button:hover:not(.active) {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.ms-canvas-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+#ms-canvas {
+    width: 100%;
+    height: 460px;
+    position: relative;
+    background: #fafbff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e7f0;
+    min-width: 560px;
+}
+
+svg#ms-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.ms-node {
+    position: absolute;
+    border-radius: 12px;
+    padding: 12px 14px;
+    text-align: center;
+    min-width: 108px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    cursor: default;
+    border: 2px solid transparent;
+    user-select: none;
+}
+
+.ms-node:hover { transform: scale(1.04); z-index: 10; }
+
+.ms-node.gateway {
+    background: #1e1b4b;
+    color: #fff;
+    border-color: #4338ca;
+    left: 50%;
+    top: 16px;
+    transform: translateX(-50%);
+}
+.ms-node.gateway:hover { transform: translateX(-50%) scale(1.04); }
+
+.ms-node.discovery {
+    background: #7c3aed;
+    color: #fff;
+    border-color: #a78bfa;
+    right: 24px;
+    top: 16px;
+    min-width: 98px;
+}
+
+.ms-node.react {
+    background: #0e7490;
+    color: #fff;
+    border-color: #22d3ee;
+    left: 24px;
+    top: 16px;
+}
+
+.ms-node.service {
+    background: #fff;
+    border-color: #e5e7f0;
+    color: var(--secondary-color);
+}
+.ms-node.service.order   { border-color: #f59e0b; }
+.ms-node.service.planning { border-color: #10b981; }
+.ms-node.service.vehicle  { border-color: #3b82f6; }
+.ms-node.service.customer { border-color: #ef4444; }
+
+.ms-node-icon  { font-size: 1.3rem; margin-bottom: 4px; }
+.ms-node-name  { font-size: 0.8rem; font-weight: 700; }
+.ms-node-port-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-top: 3px;
+    font-size: 0.7rem;
+    font-family: monospace;
+}
+
+.ms-packet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.ms-status {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.84rem;
+    color: #6b7280;
+}
+
+.ms-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    flex-shrink: 0;
+    animation: msPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes msPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    50%       { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+
+.ms-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.ms-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.ms-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .ms-section { padding: 16px; }
+    .ms-toggle button { padding: 6px 12px; font-size: 0.75rem; }
+    .hero-stats { gap: 24px; }
+    .stat-num { font-size: 1.6rem; }
+}

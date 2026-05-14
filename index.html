@@ -37,6 +37,9 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#microservices">Architecture</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#github">GitHub</a>
                     </li>
                     <li class="nav-item">
@@ -54,11 +57,17 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">Available for opportunities</div>
                 <h1 class="mb-3 animate__animated animate__fadeInDown">Hi, I'm <span style="color: var(--accent-color);">Dipak Suryawanshi</span></h1>
-                <p class="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Junior Software Developer with expertise in Java and web technologies.</p>
-                <div class="d-flex gap-3 animate__animated animate__fadeInUp animate__delay-2s">
-                    <!-- <a href="#contact" class="hero-cta">Get In Touch</a>
-                    <a href="#projects" class="hero-cta">View My Work</a> -->
+                <p class="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Junior Software Developer with expertise in Java, Spring Boot, and full-stack web technologies. Building robust, scalable solutions.</p>
+                <div class="d-flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#projects" class="hero-cta">View My Work</a>
+                    <a href="#contact" class="hero-cta hero-cta-outline">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><div class="stat-num">2+</div><div class="stat-label">Years Experience</div></div>
+                    <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Projects Built</div></div>
+                    <div class="stat-item"><div class="stat-num">Java</div><div class="stat-label">Primary Stack</div></div>
                 </div>
             </div>
         </div>
@@ -154,6 +163,33 @@
                         <p>Capable of managing project timelines and delivering high-quality solutions within deadlines.</p>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                        <p>MySQL, JPA/Hibernate, and Elasticsearch for full-text search and fast data retrieval at scale.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud &amp; DevOps</h3>
+                        <p>Oracle Cloud (OCI) deployments, Nginx reverse proxy, PM2 process management, Linux VMs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Microservices</h3>
+                        <p>Spring Cloud: Eureka discovery, API Gateway, OpenFeign inter-service calls, Resilience4j fault tolerance.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -170,11 +206,11 @@
                             <span class="timeline-date">June 2023 - Present</span>
                             <p>Vivekananda Technologies</p>
                             <ul class="mt-3">
-                                <li>Developed and maintained web applications using Java technologies</li>
-                                <li>Collaborated with cross-functional teams to analyze requirements</li>
-                                <li>Implemented software solutions to enhance user experiences</li>
-                                <li>Worked on improving application performance and reliability</li>
-                                <li>Participated in testing and debugging processes</li>
+                                <li>Developed and maintained web applications using Java &amp; Spring Boot</li>
+                                <li>Built a Zendesk–Jira Ticket Intelligence Dashboard eliminating manual cross-platform investigation</li>
+                                <li>Designed error pattern matching engine for Java exceptions, SQL failures, and runtime errors</li>
+                                <li>Mentored interns and handled end-to-end cloud deployment on Oracle Cloud (OCI)</li>
+                                <li>Architected Workshop Management System as Microservices with React frontend</li>
                             </ul>
                         </div>
                     </div>
@@ -260,7 +296,7 @@
                         <div class="project-img" style="background-image: url(assets/Note.png);"></div>
                         <div class="project-info">
                             <h3 class="project-title">Note App</h3>
-                            <p>A full-stack web application where users can create and manage notes with multiple tags for better organization. Integrated full-text search using Spring Data + Elasticsearch/Lucene for fast retrieval and added Markdown support to format notes. Built with Spring Boot (backend), HTML & CSS (frontend), and deployed on Render for seamless access.</p> 
+                            <p>A full-stack web application where users can create and manage notes with multiple tags for better organization. Integrated full-text search using Spring Data + Elasticsearch/Lucene for fast retrieval and added Markdown support to format notes. Built with Spring Boot (backend), HTML &amp; CSS (frontend), and deployed on Render for seamless access.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Java</span>
                                 <span class="tech-tag">Spring</span>
@@ -277,7 +313,190 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
+
+                <!-- HR Management System -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;">
+                            <i class="fas fa-users-cog" style="font-size:2.8rem;color:#5d8bf4;opacity:0.5;"></i>
+                            <span style="color:#6b7280;font-size:0.85rem;">HR Management System</span>
+                            <span class="new-badge">NEW</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Full Stack &middot; Cloud Deployed</div>
+                            <h3 class="project-title">HR Management System</h3>
+                            <p>Full-stack HR platform deployed on Oracle Cloud (Always Free). React+Vite frontend, Node.js backend, MySQL database served via Nginx with PM2 process management.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Nginx</span>
+                                <span class="tech-tag">Oracle Cloud</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zendesk-Jira Dashboard -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img" style="background:linear-gradient(135deg,#fef3c7,#fed7aa);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;">
+                            <i class="fas fa-ticket-alt" style="font-size:2.8rem;color:#5d8bf4;opacity:0.5;"></i>
+                            <span style="color:#6b7280;font-size:0.85rem;">Ticket Intelligence Dashboard</span>
+                            <span class="new-badge">NEW</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Internal Tool &middot; Spring Boot</div>
+                            <h3 class="project-title">Zendesk&ndash;Jira Ticket Dashboard</h3>
+                            <p>Unified 3-panel dashboard: live Zendesk tickets, intelligent historical ticket matching via custom error pattern engine (Java exceptions, SQL failures, null pointers), and auto-linked Jira issues. Cuts investigation from 20 min to seconds.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Zendesk API</span>
+                                <span class="tech-tag">Jira API</span>
+                                <span class="tech-tag">Vanilla JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-building"></i> Internal Tool</a>
+                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OKR Manager -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img" style="background:linear-gradient(135deg,#e0e7ff,#fce7f3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;">
+                            <i class="fas fa-bullseye" style="font-size:2.8rem;color:#5d8bf4;opacity:0.5;"></i>
+                            <span style="color:#6b7280;font-size:0.85rem;">OKR Manager</span>
+                            <span class="new-badge">NEW</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Full Stack &middot; SaaS Tool</div>
+                            <h3 class="project-title">OKR Manager</h3>
+                            <p>Organizational OKR tracking app with JWT authentication, objectives/key results management, and real-time progress tracking. Deployed on Windows Server via IIS reverse proxy.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">IIS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop Microservices -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img" style="background:linear-gradient(135deg,#dbeafe,#ede9fe);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;">
+                            <i class="fas fa-project-diagram" style="font-size:2.8rem;color:#5d8bf4;opacity:0.5;"></i>
+                            <span style="color:#6b7280;font-size:0.85rem;">Microservices Architecture</span>
+                            <span class="new-badge">NEW</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-type">Microservices &middot; Spring Cloud</div>
+                            <h3 class="project-title">Workshop Microservices System</h3>
+                            <p>Monolith-to-microservices migration: Customer, Vehicle, Planning, and Order services with Eureka discovery, API Gateway, OpenFeign communication, and Resilience4j fault tolerance. Full React UI.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Eureka</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">OpenFeign</span>
+                                <span class="tech-tag">Resilience4j</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#microservices" class="project-link"><i class="fas fa-sitemap"></i> See Architecture</a>
+                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Microservices Architecture Section -->
+    <section class="section" id="microservices">
+        <div class="container">
+            <h2 class="section-title mb-2">Microservices Architecture</h2>
+            <p class="text-muted mb-4">Workshop Management System &mdash; live animated service communication</p>
+
+            <div class="ms-section">
+                <div class="ms-toggle">
+                    <button class="active" onclick="setFlow('all', this)">All Flows</button>
+                    <button onclick="setFlow('order', this)">Order Flow</button>
+                    <button onclick="setFlow('customer', this)">Customer Flow</button>
+                    <button onclick="setFlow('discovery', this)">Discovery</button>
+                </div>
+
+                <div class="ms-canvas-scroll">
+                    <div id="ms-canvas">
+                        <svg id="ms-svg"></svg>
+
+                        <div class="ms-node react" id="n-react" style="left:24px;top:20px;">
+                            <div class="ms-node-icon">&#9883;&#65039;</div>
+                            <div class="ms-node-name">React UI</div>
+                            <div class="ms-node-port-badge">:3000</div>
+                        </div>
+
+                        <div class="ms-node gateway" id="n-gateway" style="left:50%;top:20px;transform:translateX(-50%)">
+                            <div class="ms-node-icon">&#128256;</div>
+                            <div class="ms-node-name">API Gateway</div>
+                            <div class="ms-node-port-badge">:8080</div>
+                        </div>
+
+                        <div class="ms-node discovery" id="n-eureka" style="right:24px;top:20px;">
+                            <div class="ms-node-icon">&#128269;</div>
+                            <div class="ms-node-name">Eureka</div>
+                            <div class="ms-node-port-badge">:8761</div>
+                        </div>
+
+                        <div class="ms-node service order" id="n-order" style="left:60px;top:220px;">
+                            <div class="ms-node-icon">&#128230;</div>
+                            <div class="ms-node-name">Order Service</div>
+                            <div class="ms-node-port-badge">:8081</div>
+                        </div>
+
+                        <div class="ms-node service planning" id="n-planning" style="left:220px;top:320px;">
+                            <div class="ms-node-icon">&#128203;</div>
+                            <div class="ms-node-name">Planning</div>
+                            <div class="ms-node-port-badge">:8082</div>
+                        </div>
+
+                        <div class="ms-node service vehicle" id="n-vehicle" style="right:220px;top:320px;">
+                            <div class="ms-node-icon">&#128663;</div>
+                            <div class="ms-node-name">Vehicle</div>
+                            <div class="ms-node-port-badge">:8083</div>
+                        </div>
+
+                        <div class="ms-node service customer" id="n-customer" style="right:60px;top:220px;">
+                            <div class="ms-node-icon">&#128100;</div>
+                            <div class="ms-node-name">Customer</div>
+                            <div class="ms-node-port-badge">:8084</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-status">
+                    <div class="ms-status-dot"></div>
+                    <span id="ms-status-text">All services running &mdash; animating communication flows</span>
+                </div>
+
+                <div class="ms-legend">
+                    <div class="ms-legend-item"><div class="ms-legend-dot" style="background:#5d8bf4"></div> REST / HTTP Request</div>
+                    <div class="ms-legend-item"><div class="ms-legend-dot" style="background:#f59e0b"></div> OpenFeign (Service-to-Service)</div>
+                    <div class="ms-legend-item"><div class="ms-legend-dot" style="background:#7c3aed"></div> Eureka Registration</div>
+                </div>
             </div>
         </div>
     </section>
