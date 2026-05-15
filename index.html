@@ -83,12 +83,12 @@
     <section class="section" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5 reveal-left">
                     <div class="about-img">
                         <img src="assets/Dipak.jpg" alt="Dipak Suryawanshi" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 reveal">
                     <div class="about-content">
                         <h2 class="section-title">About Me</h2>
                         <p>I am a dedicated and passionate Java Developer with 2+ years of hands-on experience in developing web applications, enhancing user experiences, and building robust solutions using Java.</p>
@@ -201,7 +201,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="timeline">
-                        <div class="timeline-item">
+                        <div class="timeline-item reveal-left">
                             <h3>Junior Software Developer</h3>
                             <span class="timeline-date">June 2023 - Present</span>
                             <p>Vivekananda Technologies</p>
@@ -388,8 +388,8 @@
                                 <span class="tech-tag">IIS</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://web.audev.com/okr/index.html" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/dipakcode1710/OKR" class="project-link project-link-gh" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="#microservices" class="project-link"><i class="fas fa-sitemap"></i> See Architecture</a>
-                                <a href="#" class="project-link project-link-gh"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://github.com/suryawanshi-dipak/workshop-management-system" class="project-link project-link-gh" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -443,43 +443,43 @@
                     <div id="ms-canvas">
                         <svg id="ms-svg"></svg>
 
-                        <div class="ms-node react" id="n-react" style="left:24px;top:20px;">
+                        <div class="ms-node react" id="n-react">
                             <div class="ms-node-icon">&#9883;&#65039;</div>
                             <div class="ms-node-name">React UI</div>
                             <div class="ms-node-port-badge">:3000</div>
                         </div>
 
-                        <div class="ms-node gateway" id="n-gateway" style="left:50%;top:20px;transform:translateX(-50%)">
+                        <div class="ms-node gateway" id="n-gateway">
                             <div class="ms-node-icon">&#128256;</div>
                             <div class="ms-node-name">API Gateway</div>
                             <div class="ms-node-port-badge">:8080</div>
                         </div>
 
-                        <div class="ms-node discovery" id="n-eureka" style="right:24px;top:20px;">
+                        <div class="ms-node discovery" id="n-eureka">
                             <div class="ms-node-icon">&#128269;</div>
                             <div class="ms-node-name">Eureka</div>
                             <div class="ms-node-port-badge">:8761</div>
                         </div>
 
-                        <div class="ms-node service order" id="n-order" style="left:60px;top:220px;">
+                        <div class="ms-node service order" id="n-order">
                             <div class="ms-node-icon">&#128230;</div>
                             <div class="ms-node-name">Order Service</div>
                             <div class="ms-node-port-badge">:8081</div>
                         </div>
 
-                        <div class="ms-node service planning" id="n-planning" style="left:220px;top:320px;">
+                        <div class="ms-node service planning" id="n-planning">
                             <div class="ms-node-icon">&#128203;</div>
                             <div class="ms-node-name">Planning</div>
                             <div class="ms-node-port-badge">:8082</div>
                         </div>
 
-                        <div class="ms-node service vehicle" id="n-vehicle" style="right:220px;top:320px;">
+                        <div class="ms-node service vehicle" id="n-vehicle">
                             <div class="ms-node-icon">&#128663;</div>
                             <div class="ms-node-name">Vehicle</div>
                             <div class="ms-node-port-badge">:8083</div>
                         </div>
 
-                        <div class="ms-node service customer" id="n-customer" style="right:60px;top:220px;">
+                        <div class="ms-node service customer" id="n-customer">
                             <div class="ms-node-icon">&#128100;</div>
                             <div class="ms-node-name">Customer</div>
                             <div class="ms-node-port-badge">:8084</div>
@@ -546,70 +546,33 @@
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="container">
-            <h2 class="section-title mb-5">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p class="d-none">
-                            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-                        </p>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+            <h2 class="section-title text-center mb-2">Get In Touch</h2>
+            <p class="text-center mb-5" style="color:var(--muted);font-size:0.95rem;">Open to opportunities, collaborations, and conversations.</p>
+            <div class="contact-cards-grid">
+                <div class="contact-card reveal">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-label">Location</div>
+                    <div class="contact-val">Navi Mumbai, Maharashtra, India</div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Navi Mumbai, Maharashtra, India</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p><a href="mailto:suryawanshidipak303@gmail.com">Dipak Suryawanshi</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <a href="tel:+919130766562" class="phone-link">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h4>Phone</h4>
-                                    <p>(+91) 9130766562</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div>
-                                <h4>GitHub</h4>
-                                <p><a href="https://github.com/dipakcode1710" target="_blank">github.com/dipakcode1710</a></p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contact-card reveal" style="transition-delay:0.08s">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-val"><a href="mailto:suryawanshidipak303@gmail.com">suryawanshidipak303@gmail.com</a></div>
+                </div>
+                <div class="contact-card reveal" style="transition-delay:0.16s">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-val"><a href="tel:+919130766562">(+91) 9130766562</a></div>
+                </div>
+                <div class="contact-card reveal" style="transition-delay:0.24s">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-val"><a href="https://github.com/dipakcode1710" target="_blank">github.com/dipakcode1710</a></div>
+                </div>
+                <div class="contact-card reveal" style="transition-delay:0.32s">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-val"><a href="https://www.linkedin.com/in/dipaksuryawanshi-dev" target="_blank">dipaksuryawanshi-dev</a></div>
                 </div>
             </div>
         </div>
@@ -618,18 +581,33 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/dipakcode1710" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dipaksuryawanshi-dev" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="mailto:dipaksuryawanshi1710@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-name">Dipak Suryawanshi</div>
+                    <div class="footer-tagline">Java &middot; Spring Boot &middot; Microservices &middot; Cloud</div>
+                </div>
+                <div class="social-links" style="margin-bottom:0">
+                    <a href="https://github.com/dipakcode1710" class="social-link" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dipaksuryawanshi-dev" class="social-link" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:suryawanshidipak303@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-            <p>© 2025 Dipak Ramhari Suryawanshi. All Rights Reserved.</p>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dipak Ramhari Suryawanshi. All Rights Reserved.</p>
+                <div class="footer-nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#microservices">Architecture</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 

@@ -1,3 +1,19 @@
+// ---- Scroll reveal ----
+document.addEventListener('DOMContentLoaded', function() {
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left');
+    if (revealEls.length) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    }
+});
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for all anchor links
